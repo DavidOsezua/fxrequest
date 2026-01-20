@@ -1,9 +1,9 @@
 <div>
-  <h3>FX Requests</h3>
+  <h3 class="heading">FX Requests Table</h3>
 
-  <p *ngIf="requests.length === 0">No requests yet.</p>
+  <p *ngIf="requests.length === 0" class="empty">No requests yet.</p>
 
-  <table *ngIf="requests.length > 0">
+  <table *ngIf="requests.length > 0" class="table">
     <thead>
       <tr>
         <th>ID</th>

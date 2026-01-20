@@ -1,5 +1,7 @@
-<h2>FX Request</h2>
-
-<app-fxrequest-form (requestSubmitted)="onRequestSubmitted($event)"></app-fxrequest-form>
+<div class="container">
+<app-fxrequest-form
+  (requestSubmitted)="onRequestSubmitted($event)"
+></app-fxrequest-form>
 
 <app-fxrequest-list [requests]="fxRequests"></app-fxrequest-list>
+</div>
