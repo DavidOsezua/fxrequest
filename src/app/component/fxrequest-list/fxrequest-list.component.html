@@ -1,0 +1,26 @@
+<div>
+  <h3>FX Requests</h3>
+
+  <p *ngIf="requests.length === 0">No requests yet.</p>
+
+  <table *ngIf="requests.length > 0">
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>From</th>
+        <th>To</th>
+        <th>Amount</th>
+        <th>Date</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let request of requests">
+        <td>{{ request.id }}</td>
+        <td>{{ request.sourceCurrency }}</td>
+        <td>{{ request.targetCurrency }}</td>
+        <td>{{ request.amount }}</td>
+        <td>{{ request.requestDate | date:'short' }}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
