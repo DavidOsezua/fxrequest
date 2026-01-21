@@ -47,11 +47,10 @@
   border-radius: 12px;
   font-size: 0.85rem;
   font-weight: 500;
-}
-
-.status.pending {
-  background: #fff3cd;
+    background: #fff3cd;
   color: #856404;
 }
+
+
 
 
