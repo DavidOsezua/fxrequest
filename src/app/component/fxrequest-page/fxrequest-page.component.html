@@ -1,7 +1,14 @@
 <div class="container">
-<app-fxrequest-form
-  (requestSubmitted)="onRequestSubmitted($event)"
-></app-fxrequest-form>
+  <div class="header">
+    <h1 class="pageTitle">FX Request Manager</h1>
+    <button class="addBtn" (click)="openModal()">+ Add New Request</button>
+  </div>
 
-<app-fxrequest-list [requests]="fxRequests"></app-fxrequest-list>
+  <app-fxrequest-form
+    [isOpen]="isModalOpen"
+    (requestSubmitted)="onRequestSubmitted($event)"
+    (closeModal)="closeModal()"
+  ></app-fxrequest-form>
+
+  <app-fxrequest-list [requests]="fxRequests"></app-fxrequest-list>
 </div>

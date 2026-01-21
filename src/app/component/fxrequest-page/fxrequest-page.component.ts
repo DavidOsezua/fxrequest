@@ -11,7 +11,16 @@ import { FxRequest } from '../../model/fxrequest.model';
   styleUrl: './fxrequest-page.component.css'
 })
 export class FxrequestPageComponent {
-   fxRequests: FxRequest[] = [];
+  fxRequests: FxRequest[] = [];
+  isModalOpen = false;
+
+  openModal(): void {
+    this.isModalOpen = true;
+  }
+
+  closeModal(): void {
+    this.isModalOpen = false;
+  }
 
   onRequestSubmitted(request: FxRequest): void {
     this.fxRequests.push(request);

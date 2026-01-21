@@ -1,4 +1,4 @@
-<div>
+<div class="listContainer">
   <h3 class="heading">FX Requests Table</h3>
 
   <p *ngIf="requests.length === 0" class="empty">No requests yet.</p>
@@ -6,19 +6,27 @@
   <table *ngIf="requests.length > 0" class="table">
     <thead>
       <tr>
-        <th>ID</th>
+        <th>Requester</th>
         <th>From</th>
         <th>To</th>
         <th>Amount</th>
+        <th>Purpose</th>
+        <th>Status</th>
         <th>Date</th>
       </tr>
     </thead>
     <tbody>
       <tr *ngFor="let request of requests">
-        <td>{{ request.id }}</td>
+        <td>{{ request.requesterName }}</td>
         <td>{{ request.sourceCurrency }}</td>
         <td>{{ request.targetCurrency }}</td>
-        <td>{{ request.amount }}</td>
+        <td>{{ request.amount | number:'1.2-2' }}</td>
+        <td>{{ request.purpose }}</td>
+        <td>
+          <span class="status" >
+            {{ request.status }}
+          </span>
+        </td>
         <td>{{ request.requestDate | date:'short' }}</td>
       </tr>
     </tbody>
